@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Animation Section -->
+    <FrameLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/header_gradient"
+        app:layout_constraintHeight_percent="0.40"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:scaleType="centerCrop"/>
+
+        <!-- Decorative overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/fade_overlay"/>
+
+    </FrameLayout>
+
+    <!-- Bottom Sheet Content -->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/top_rounded_sheet"
+        android:elevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topHeader"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to LoginModule"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Subtitle with dividers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E8E8E8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in or sign up"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E8E8E8"/>
+        </LinearLayout>
+
+        <!-- Phone Input Container -->
+        <LinearLayout
+            android:id="@+id/phoneInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_field_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <!-- Country Flag -->
+            <ImageView
+                android:id="@+id/ivFlag"
+                android:layout_width="28dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_flag_india_placeholder"
+                android:scaleType="centerCrop"
+                android:contentDescription="Country flag"/>
+
+            <TextView
+                android:id="@+id/tvCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91"
+                android:textColor="#1A1A2E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_dropdown"
+                android:layout_marginStart="4dp"
+                android:alpha="0.6"
+                android:contentDescription="Dropdown"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="28dp"
+                android:background="#E0E0E0"
+                android:layout_marginHorizontal="12dp"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="#1A1A2E"
+                android:textColorHint="#AAAAAA"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Phone Suggestions -->
+        <LinearLayout
+            android:id="@+id/suggestionsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/suggestions_bg"
+            android:padding="8dp"/>
+
+        <!-- Continue Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:alpha="0.6"
+            app:cornerRadius="12dp"
+            android:backgroundTint="#EF5350"/>
+
+        <!-- Or Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E8E8E8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E8E8E8"/>
+        </LinearLayout>
+
+        <!-- Social Login Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- Google Sign-In Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Continue with Google"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#1A1A2E"
+                app:icon="@drawable/ic_google_placeholder"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="24dp"
+                app:cornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#FFFFFF"/>
+
+            <!-- Email Sign-In Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Continue with Email"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="#1A1A2E"
+                app:icon="@drawable/ic_email_placeholder"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="24dp"
+                app:cornerRadius="12dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- Terms -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="By continuing, you agree to our\nTerms of Service &amp; Privacy Policy"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Progress Bar Overlay -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:indeterminateTint="#EF5350"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

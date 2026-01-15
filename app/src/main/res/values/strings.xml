@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Login Module</string>
+    <string name="title_activity_login">Login</string>
+    
+    <!-- Google Sign-In: Replace with your Web Client ID from Firebase Console -->
+    <!-- Go to Firebase Console > Authentication > Sign-in method > Google > Web Client ID -->
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_FROM_FIREBASE</string>
+    
+    <!-- Login Screen -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome!</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Login failed</string>
+    
+    <!-- New Login Module Strings -->
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="continue_text">Continue</string>
+    <string name="log_in_or_sign_up">Log in or sign up</string>
+    <string name="or">or</string>
+    <string name="terms_text">By continuing, you agree to our\nTerms of Service &amp; Privacy Policy</string>
+    
+    <!-- OTP Screen -->
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="enter_otp_subtitle">Enter the 6-digit code sent to\nyour phone number</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend</string>
+    <string name="resend_otp_in">Resend OTP in</string>
+    <string name="didnt_receive_otp">Didn\'t receive OTP?</string>
+    
+    <!-- Email Login Screen -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="toggle_to_signup">Don\'t have an account? Sign Up</string>
+    <string name="toggle_to_login">Already have an account? Log In</string>
+    
+    <!-- Error Messages -->
+    <string name="error_required">This field is required</string>
+    <string name="error_invalid_email">Enter a valid email address</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_invalid_otp">Please enter a valid 6-digit OTP</string>
+    <string name="error_invalid_phone">Please enter a valid phone number</string>
+    
+    <!-- Success Messages -->
+    <string name="otp_sent_success">OTP sent successfully!</string>
+    <string name="login_success">Login successful!</string>
+    <string name="account_created_success">Account created successfully!</string>
+</resources>
