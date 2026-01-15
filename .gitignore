@@ -48,6 +48,9 @@ captures/
 *.p12
 *.key
 
+# Firebase configuration files (contains API keys)
+google-services.json
+
 # Google Services (Firebase)
 google-services.json
 GoogleService-Info.plist
